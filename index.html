@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+  />
+  <title>Permit Checker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Permit Checker</h1>
+    <div class="sub">Oversize / Overweight • 48 States</div>
+  </header>
+
+  <main class="container">
+    <!-- INPUTS -->
+    <section class="card">
+      <h2 class="card-title">Load details</h2>
+
+      <div class="grid-2">
+        <div>
+          <label class="label">Road type</label>
+          <select id="roadType">
+            <option value="two">2-lane highway</option>
+            <option value="multi" selected>Multi-lane</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="label">States (select one or more)</label>
+          <!-- Multi-select with the 48 contiguous states -->
+          <select id="states" multiple size="8" class="multiselect">
+            <!-- Filled by JS so we don’t duplicate the list -->
+          </select>
+          <div class="hint">Tip: Cmd/Ctrl + click (or long press on mobile) to pick multiple.</div>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div>
+          <label class="label">Width</label>
+          <div class="ftin">
+            <input id="widthFt" type="number" min="0" inputmode="numeric" placeholder="ft">
+            <span>ft</span>
+            <input id="widthIn" type="number" min="0" max="11" inputmode="numeric" placeholder="in">
+            <span>in</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="label">Height</label>
+          <div class="ftin">
+            <input id="heightFt" type="number" min="0" inputmode="numeric" placeholder="ft">
+            <span>ft</span>
+            <input id="heightIn" type="number" min="0" max="11" inputmode="numeric" placeholder="in">
+            <span>in</span>
+          </div>
+        </div>
+
+        <div>
+          <label class="label">Overall length</label>
+          <div class="ftin">
+            <input id="lengthFt" type="number" min="0" inputmode="numeric" placeholder="ft">
+            <span>ft</span>
+            <input id="lengthIn" type="number" min="0" max="11" inputmode="numeric" placeholder="in">
+            <span>in</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <label class="label">Gross weight</label>
+        <div class="with-suffix">
+          <input id="grossLbs" type="number" min="0" inputmode="numeric" placeholder="lbs">
+          <span class="suffix">lbs</span>
+        </div>
+        <div class="hint">For v1 we assume 80,000 lbs as legal gross without a permit unless a state rule says otherwise.</div>
+      </div>
+
+      <button id="checkBtn" class="btn-primary">Check requirements</button>
+    </section>
+
+    <!-- RESULTS -->
+    <section id="resultsCard" class="card hidden">
+      <h2 class="card-title">Results</h2>
+      <div id="resultsTableWrap" class="table-wrap">
+        <!-- Table injected by JS -->
+      </div>
+
+      <details class="notes">
+        <summary>Notes & disclaimers</summary>
+        <ul class="notes-list">
+          <li>This tool is for quick screening only and may not reflect latest rule changes. Always verify with the state DOT or official permit office before travel.</li>
+          <li>States with "Data not loaded yet" are ready for you to plug in thresholds; the logic will update automatically.</li>
+          <li>Escort / high-pole thresholds vary by road type, district, and sometimes route. Use this as guidance only until fully verified per state.</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
