@@ -2,13 +2,13 @@
 const CACHE = "routeguard-v1";
 const ASSETS = [
   "/", "/index.html", "/styles.css", "/app.js", "/manifest.json",
-  "/RouteGuard_192x192_Android.png",
-  "/RouteGuard_512x512_PlayStore.png",
-  "/RouteGuard_180x180_iPhone.png",
-  "/RouteGuard_167x167_iPadPro.png",
-  "/RouteGuard_152x152_iPad.png",
-  "/RouteGuard_120x120_iPhone.png",
-  "/RouteGuard_1024x1024_AppStore.png"
+  "/routeguard.png",
+  "/routeguard.png",
+  "/routeguard.png",
+  "/routeguard.png",
+  "/routeguard.png",
+  "/routeguard.png",
+  "/routeguard.png"
 ];
 
 self.addEventListener("install", e => {
