@@ -1,0 +1,52 @@
+{
+  "id": "/",
+  "name": "RouteGuard",
+  "short_name": "RouteGuard",
+  "description": "Multi-state oversize/overweight permit & escort checker for truck drivers.",
+  "lang": "en-US",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0b1a2f",
+  "icons": [
+    {
+      "src": "RouteGuard_192x192_Android.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "RouteGuard_512x512_PlayStore.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "RouteGuard_180x180_iPhone.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "RouteGuard_167x167_iPadPro.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "RouteGuard_152x152_iPad.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "RouteGuard_120x120_iPhone.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    },
+    {
+      "src": "RouteGuard_1024x1024_AppStore.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}
